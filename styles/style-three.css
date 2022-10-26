@@ -1,0 +1,418 @@
+/* BASIC RESET----------------------------------------------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+    /*border: 0.2rem solid black;*/
+    font-family:
+        /* Safari for OS X and iOS (San Francisco) */
+        -apple-system,
+        /* Chrome >= 56 for OS X (San Francisco), Windows, Linux and Android */
+        system-ui,
+        /* Chrome < 56 for OS X (San Francisco) */
+        BlinkMacSystemFont,
+        /* Windows */
+        "Segoe UI",
+        /* Android */
+        "Roboto",
+        /* Basic web fallback */
+        "Helvetica Neue", Arial, sans-serif;
+    background-color: black;
+    height: 200vh;
+}
+
+/* NAVIGATION START-------------------------------------------------------------------*/
+body {
+    --nav-load-time: 300ms;
+    --nav-link-load-time: 500ms;
+}
+
+nav {
+    background-color: yellow;
+    color: black;
+    font-size: 3rem;
+    animation: nav-load var(--nav-load-time) ease-in;
+}
+
+nav ul {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    list-style: none;
+    padding: 10px;
+    margin: 0 10px;
+    animation-name: nav-link-load;
+    animation-duration: var(--nav-link-load-time);
+    animation-timing-function: ease-in;
+    animation-delay: var(--nav-load-time);
+    animation-fill-mode: forwards;
+    /*transform: scale(0);*/
+}
+
+nav li:first-child {
+    animation-name: nav-first-link-load;
+    transform: translateX(-1000%);
+}
+
+nav li:last-child {
+    animation-name: nav-last-link-load;
+    transform: translateX(1000%);
+}
+
+.icon {
+    color: black;
+}
+
+nav li:hover {
+    background-color: #FFFFFF44;
+}
+
+nav a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.container {
+    padding: 30px;
+}
+
+@keyframes nav-load {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(0)
+    }
+}
+
+@keyframes nav-link-load {
+    0% {
+        transform: scale(0);
+    }
+
+    90% {
+        transform: sclae(1.1);
+    }
+
+    100% {
+        transform: sclae(1);
+    }
+}
+
+@keyframes nav-first-link-load {
+    0% {
+        transform: translateX(-1000%);
+    }
+
+    90% {
+        transform: translateX(50%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes nav-last-link-load {
+    0% {
+        transform: translateX(1000%);
+    }
+
+    90% {
+        transform: translateX(-50%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/*NAVIGATION STOP--------------------------------------------------------------------- */
+
+/*MAIN.CONTAINER-----------------------------------------------------------------------*/
+.container {
+    margin:
+        display: flex;
+    flex-shrink: 1;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    /*background-image: linear-gradient(-90deg, blue, red, yellow);*/
+    height: 100vh;
+}
+
+.form {
+    background-color: black;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem;
+    font-size: 2rem;
+    width: 100%;
+}
+
+.fields {
+    margin: 0rem;
+    padding: 10px;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+input,
+textarea {
+    margin: 0.5rem 0;
+    padding: 0.8rem;
+    outline: 1px solid black;
+    width: 100%;
+    font-size: 2rem;
+    background-color: lightyellow;
+}
+
+/* input on focus */
+input[type="text"]:focus {
+    outline: 1px solid hotpink;
+    background-color: lightblue;
+}
+
+input[type="email"]:focus,
+textarea:focus {
+    outline: 1px solid blue;
+    background-color: lightblue;
+}
+
+/*TEXT IN FORM -----------------------------------------------------------------------*/
+h1 {
+    color: yellow;
+    font-size: 3rem;
+    font-weight: normal;
+    margin: 1rem;
+    padding: 3rem;
+}
+
+label {
+    color: lightblue;
+    font-size: 2.5rem;
+    ;
+}
+
+h2 {
+    color: yellow;
+    padding: 3rem;
+    font-weight: normal;
+}
+
+footer {
+    margin: 5%;
+}
+
+/*UPLOAD-----------------------------------------------------------------------------*/
+.upload {
+    color: blue;
+    padding: 20px;
+    width: 100%;
+}
+
+/*CHECKBOXES-------------------------------------------------------------------------*/
+.list-service {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+.list-service>li {
+    list-style: none;
+    text-align: left;
+    color: lightblue;
+}
+
+.checkbox {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    height: 40px;
+}
+
+#web-dev,
+#cont-wr,
+#data-an {
+    width: 50px;
+}
+
+.check {
+    font-size: 2.5rem;
+    font-weight: normal;
+}
+
+/* SLIDER---------------------------------------------------------------------------- */
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    width: 6rem;
+    height: 3rem;
+    margin-left: 1rem;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle {
+    display: flex;
+    align-items: center;
+    padding: 3rem;
+    justify-content: space-between;
+}
+
+.toggle-label {
+    color: red;
+    font-size: 3rem;
+    font-weight: normal;
+    font-family: cursive;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: green;
+    transition: 0.4s;
+    border-radius: 50rem;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 2rem;
+    width: 2rem;
+    left: 0.5rem;
+    bottom: 0.5rem;
+    background-color: red;
+    transition: 0.4s;
+    border-radius: 100%;
+}
+
+input:checked+.slider {
+    background-color: red;
+}
+
+input:checked+.slider:before {
+    transform: translateX(3rem);
+}
+
+/* DATES------------------------------------------------------------------------------*/
+.project>label {
+    color: lightgreen;
+}
+
+/*CATEGORY----------------------------------------------------------------------------*/
+.category {
+    padding: 3rem;
+}
+
+.category>label {
+    color: pink;
+}
+
+.data {
+    font-size: 2.2rem;
+}
+
+/*SUBMIT------------------------------------------------------------------------------*/
+input[type="submit"] {
+    background-color: orangered;
+    margin-top: 1rem;
+    width: 20rem;
+    outline: 1px solid blueviolet;
+}
+
+.btn-submit {
+    padding: 1em;
+    border: 0;
+    font-size: 1.8rem;
+    border-radius: 0.5em;
+    background-image: linear-gradient(to bottom, #57b, #148);
+    box-shadow: 0.1em 0.1em 0.5em #124;
+    margin-right: 1em;
+}
+
+.btn-submit a {
+    color: white;
+}
+
+.btn-submit:active {
+    box-shadow: inset 0 0 0.5em #124, inset 0 0.5em 1em rgba(0, 0, 0, 0.4);
+}
+
+#cat {
+    /*margin: 10%;*/
+    text-decoration: none;
+}
+
+/*FOOTER-----------------------------------------------------------------------------*/
+footer {
+    color: white;
+    padding: 20px;
+    font-size: 1.5rem;
+}
+
+/* RESPONSIVENESS START---------------------------------------------------------------*/
+/*MOBILE RESPONSIVESS------------------------------------------------------------------*/
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    body {
+        border: 10px solid red;
+    }
+}
+
+/*RESPONSIVENESS BETWEEN MOBILE AND TABLET------------------------------------------ */
+@media screen and (min-width: 481px) {
+    body {
+        border: 10px solid red;
+    }
+}
+
+/*TABLET RESPONSIVENESS----------------------------------------------------------------*/
+@media screen and (min-width: 769px) {
+    body {
+        border: 10px solid yellow;
+    }
+}
+
+/*LAPTOP RESPONSIVENESS----------------------------------------------------------------*/
+@media screen and (min-width: 1025px) {
+    body {
+        border: 10px solid green;
+    }
+}
+
+/*LARGE SCREEN AND TV RESPONSIVENESS---------------------------------------------------*/
+@media screen and (min-width: 1201px) {
+    body {
+        border: 10px solid blue;
+    }
+}
+
+/*RESPONSIVENESS STOP------------------------------------------------------------------*/

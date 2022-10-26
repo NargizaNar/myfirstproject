@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+/*BASIC RESET--------------------------------------------------------------------------*/
+:root {
+    /*font-size: 62.5%;*/
+    --lightBlue: #5eccdf;
+    --lightGreen: lightgreen;
+    --black: #130f40;
+    --light-color: #666;
+    --box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+    --border: 0.2rem solid rgba(0, 0, 0, 0.1);
+    --outline: 0.1rem solid rgba(0, 0, 0, 0.1);
+    --outline-hover: 0.2rem solid var(--black);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*BODY BACKGROUND----------------------------------------------------------------------*/
+
+body {
+    width: 100vw;
+    background-image: url(/images/background.png);
+    background-repeat: repeat;
+}
+
+section {
+    margin: 0 0 2rem 0;
+}
+
+/*NAVIGATION START-------------------------------------------------------------------- */
+
+header {
+    position: fixed;
+    margin: 1rem;
+    box-shadow: var(--lightBlue);
+    background-color: yellow;
+}
+
+header input {
+    display: none;
+}
+
+header label span {
+    padding: 1rem;
+    cursor: pointer;
+    display: inline-block;
+}
+
+header label span.icon {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+
+header label span::before {
+    content: "\f0c9";
+}
+
+header nav {
+    display: flex;
+    flex-direction: column;
+}
+
+header nav li {
+    display: block;
+    padding: 1rem;
+    /* background-color: var(--lightGreen); */
+    background-color: var(--lightBlue);
+}
+
+header li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+header nav li:hover {
+    background: yellow;
+}
+
+header nav {
+    display: none;
+}
+
+header input:checked~nav {
+    display: block;
+}
+
+header input:checked+label span::before {
+    content: "\f00d";
+}
+
+header label span {
+    color: black;
+}
+
+/*NAVIGATION STOP --------------------------.-----------------------------------------*/
+
+
+/*BOX-CONTAINER START-----------------------------------------------------------------*/
+
+.box-container .box {
+    padding: 3rem 2rem;
+    outline: var(--outline);
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    background-color: black;
+    margin: 1rem;
+}
+
+.box-container .box img {
+    margin: 1rem 0;
+    height: 15rem;
+}
+
+.box-container .box h3 {
+    font-size: 2.5rem;
+    line-height: 1.8;
+    color: yellow;
+}
+
+.box-container .box li {
+    color: pink;
+    font-size: 1.5rem;
+    line-height: 1.8;
+    padding: 0.2rem 0;
+}
+
+.btn {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 0.8rem 3rem;
+    font-size: 1.7rem;
+    border-radius: 0.5rem;
+    border: 0.2rem solid white;
+    color: lightblue;
+    cursor: pointer;
+    background: var(--highlight);
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+/* BOX-CONTAINER STOP ---------------------------------------------------------------*/
+
+footer {
+    background-color: black;
+    color: white;
+    font-size: 1rem;
+}
+
+/* RESPONSIVENESS START---------------------------------------------------------------*/
+/*MOBILE - RESPONSIVENESS------------------------------------------------------------*/
+@media screen and (min-width: 376px) {
+    body {
+        border: 10px solid red;
+    }
+
+    header nav li {
+        display: inline-block;
+    }
+}
+
+@media screen and (min-width: 426px) {
+    body {
+        border-color: yellow;
+    }
+}
+
+@media (min-width: 576px) {
+    header {
+        text-align: left;
+    }
+
+    header label span.icon {
+        display: none;
+    }
+
+    header nav {
+        display: block;
+    }
+
+    header nav li {
+        display: inline-block;
+    }
+}
+
+/*TABLET- RESPONSIVENESS---------------------------------------------------------------*/
+@media (min-width: 769px) {
+    .box-container {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    @media screen and (min-width: 769px) {
+        body {
+            border-color: green;
+        }
+    }
+    .box {
+        flex-basis: 30%;
+        flex-grow: 1;
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar {
+        display: block;
+    }
+}
+
+/*LAPTOP AND BIGGER SCREENS RESPONSIVENESS--------------------------------------------*/
+@media screen and (min-width: 1025px) {
+    body {
+        border-color: blue;
+    }
+}
+
+@media screen and (min-width: 1441px) {
+    body {
+        border-color: violet;
+    }
+}
+/* RESPONSIVENESS STOP----------------------------------------------------------------*/

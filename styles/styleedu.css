@@ -1,0 +1,57 @@
+/* BASIC RESET ---------------------------------------------------------------------*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    font-size: 62, 5%;
+}
+
+/*BODY--------------------------------------------------------------------------------*/
+
+body {
+    background-color: black;
+}
+
+main {
+    background-color: yellow;
+    ;
+}
+
+h1 {
+    color: red;
+    padding: 1rem;
+}
+
+/*TABLE---------------------------------------------------------------------------------*/
+table {
+    background-color: black;
+    color: white;
+    border-collapse: collapse;
+    width: 100%;
+    border: 3px solid blue;
+    padding: 1rem;
+}
+
+th {
+    font-size: 1.3rem;
+}
+
+td {
+    font-size: 1.2rem;
+}
+
+td {
+    font-size: 1rem;
+    padding: 10px;
+}
+
+/*Link to return to the previous page*/
+.back {
+    font-size: 2rem;
+    font-weight: bold;
+    color: blue;
+    padding: 40%;
+}

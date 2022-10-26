@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="styles/style-three.css" >
+  <title>Portfolio, Nargiza Nizamedinkhodjayeva, Page Three out of Three</title>
+</head>
+
+<body>
+  <!--HEADER-->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">
+            <ion-icon class="icon" name="home-outline"></ion-icon>
+          </a></li>
+        <li><a href="intwo.html">Skills</a></li>
+        <li><a class="active" href="inthree.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!--MAIN.CONTAINER-->
+  <main class="container">
+    <!--FORM/DATA INPUT-->
+    <form class="form" action=".../users" method="GET" name="my-form">
+      <section class="fields">
+        <h1>How to contact you?</h1>
+        <label for="firstname">First name</label>
+        <input type="text" id="firstname" placeholder="First name">
+        <label for="lastname">Last name</label>
+        <input type="text" id="lastname" placeholder="Last name">
+      </section>
+
+      <section class="fields">
+        <label for="email">Your email</label>
+        <input type="email" id="email" placeholder="example@example.org">
+      </section>
+
+      <section class="fields">
+        <label for="message">What help do you need?</label>
+        <textarea id="message" rows="5" placeholder="Briefly explain your expectations"></textarea>
+      </section>
+      <!--UPLOAD-->
+      <section class="upload">
+        <label id="upl">Upload your file</label>
+        <input type="file" id="myFile" name="filename" multiple>
+      </section>
+      <!--CHECKBOXES-->
+      <section class="checkboxes">
+        <h2>My Services:</h2>
+        <ul class="list-service">
+          <li>
+            <div class="checkbox">
+              <label class="check" for="web-dev">Web Development</label>
+              <input type="checkbox" name="web-dev" value="wd" id="web-dev" >
+            </div>
+          </li>
+
+          <li>
+            <div class="checkbox">
+              <label class="check" for="cont-wr">Content Writing</label>
+              <input type="checkbox" name="cont-wr" value="cw" id="cont-wr" >
+            </div>
+          </li>
+
+          <li>
+            <div class="checkbox">
+              <label class="check" for="data-an">Data Analysis</label>
+              <input type="checkbox" name="data-an" value="da" id="data-an" >
+            </div>
+          </li>
+        </ul>
+        <!--SLIDER -->
+        <section class="toggle">
+          <label class="toggle-label">Is it urgent?</label>
+          <label class="switch">
+            <input type="checkbox" >
+            <span class="slider"></span>
+          </label>
+        </section>
+        <!--DATES-->
+        <div>
+          <div class="project">
+            <label class="label" for="projectstart">Project Start:</label>
+            <input class="data" type="date" name="projectstart" id="projectstart" >
+            <label class="label" for="projectend">Project End:</label>
+            <input class="data" type="date" name="projectend" id="projectend" >
+          </div>
+          <!--CATEGORY-->
+          <div class="category">
+            <label class="label" for="category">Category:</label>
+            <select class="data" name="category" id="category">
+              <option value="personal">Personal</option>
+              <option value="business">Business</option>
+              <option value="government">Government</option>
+            </select>
+          </div>
+        </div>
+      </section>
+
+      <!--SUBMIT-->
+      <div class="submit">
+          <button class="btn btn-submit"><a href="walkcat.html" id="cat">SUBMIT</a></button>
+      </div>
+    </form>
+
+    <!--FOOTER-->
+    <footer>
+      <span class="copyright">&copy; 2022 Nargiza DCI. All rights reserved.</span>
+    </footer>
+  </main>
+  <!--Script links for media icons-->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
