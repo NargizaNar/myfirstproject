@@ -1,6 +1,6 @@
 # Myfirstproject
 
-Portfolio of Nargiza Nizamedinkhodjayeva/Walther October 2022
+Portfolio of Nargiza Nizamedinkhodjayeva October 2022
 
 ## From Design to Product
 
